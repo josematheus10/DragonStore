@@ -2,7 +2,6 @@
 
 namespace DragonStore.Catalogo.Domain
 {
-    public class Produto : Entity, IAggregateRoot
     {
         public string Nome { get; private set; }
         public string Descricao { get; private set; }
@@ -25,7 +24,7 @@ namespace DragonStore.Catalogo.Domain
             DateTime dataCadastro,
             string imagem,
             Dimensoes dimensoes
-        )
+         )
         {
             Nome = nome;
             Descricao = descricao;
@@ -85,5 +84,5 @@ namespace DragonStore.Catalogo.Domain
         }
     }
 
- 
+  
 }

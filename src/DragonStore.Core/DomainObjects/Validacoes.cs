@@ -97,7 +97,7 @@ namespace DragonStore.Core.DomainObjects
             if (valor < minimo)
                 throw new DomainException(mensagem);
         }
-        
+
         public static void ValidarSeMenorQue(int valor, int minimo, string mensagem)
         {
             if (valor < minimo)
