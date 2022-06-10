@@ -7,6 +7,10 @@ namespace DragonStore.Catalogo.Domain
         public string Nome { get; }
         public string Descricao { get; }
 
+        public ICollection<Produto> Produtos { get; set; }
+
+        protected Categoria() { }
+
         public Categoria(string nome, string descricao)
         {
             Nome = nome;
