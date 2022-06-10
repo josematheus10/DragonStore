@@ -5,12 +5,9 @@ namespace DragonStore.Catalogo.Domain;
 public interface IProdutoRepository : IRepository<Produto>
 {
     Task<IEnumerable<Produto>> ObterTodos();
-
     Task<Produto> ObterPorId(Guid id);
-
-    Task<IEnumerable<Produto>> ObterPorCategoria(int id);
-
-    Task<IEnumerable<Categoria>> ObterVategorias();
+    Task<IEnumerable<Produto>> ObterPorCategoria(Guid id);
+    Task<IEnumerable<Categoria>> ObterCategorias();
 
     void Adicionar(Produto produto);
     void Atualizar(Produto produto);
