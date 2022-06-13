@@ -7,7 +7,7 @@ namespace DragonStore.Catalogo.Data
     public class CatalogoContext : DbContext, IUnitOfWork
     {
         public CatalogoContext(DbContextOptions<CatalogoContext> options) 
-            : base(options) { }
+            : base(options) {}
 
         public DbSet<Produto> Produtos { get; set; }
 
@@ -27,6 +27,7 @@ namespace DragonStore.Catalogo.Data
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(CatalogoContext).Assembly);
         }
+
 
         public async Task<bool> Commit()
         {

@@ -11,7 +11,7 @@ namespace DragonStore.Catalogo.Domain
         public DateTime DataCadastro { get; private set; }
         public string Imagem { get; private set; }
         public int QuantidadeEstoque { get; private set; }
-        public Dimensoes Dimensoes { get; private set; }
+        //public Dimensoes Dimensoes { get; private set; }
         
         public Guid CategoriaId { get; private set; }
         public Categoria Categoria { get; private set; }
@@ -23,8 +23,8 @@ namespace DragonStore.Catalogo.Domain
             decimal valor,
             Guid categoriaId,
             DateTime dataCadastro,
-            string imagem,
-            Dimensoes dimensoes
+            string imagem
+            //Dimensoes dimensoes
          )
         {
             Nome = nome;
@@ -34,10 +34,12 @@ namespace DragonStore.Catalogo.Domain
             DataCadastro = dataCadastro;
             Imagem = imagem;
             CategoriaId = categoriaId;
-            Dimensoes = dimensoes;
+            //Dimensoes = dimensoes;
 
             Validar();
         }
+        
+        protected Produto() { }
 
         private void Validar()
         {

@@ -21,4 +21,8 @@
     <ProjectReference Include="..\DragonStore.Core\DragonStore.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

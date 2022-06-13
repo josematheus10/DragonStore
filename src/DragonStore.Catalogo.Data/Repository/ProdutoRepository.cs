@@ -1,11 +1,6 @@
 ﻿using DragonStore.Catalogo.Domain;
 using DragonStore.Core.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DragonStore.Catalogo.Data.Repository
 {
@@ -24,15 +19,15 @@ namespace DragonStore.Catalogo.Data.Repository
         {
             return await _context.Produtos.AsNoTracking().ToListAsync();
         }
-
+        
         public async Task<Produto> ObterPorId(Guid id)
         {
-            return await _context.Produtos.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
+            return await _context.Produtos.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id) ?? throw new Exception("Produto não encontrado");
         }
         
-        public async Task<IEnumerable<Produto>> ObterPorCategoria(Guid id)
+        public async Task<IEnumerable<Produto>> ObterPorCategoria(int codigo)
         {
-            return await _context.Produtos.AsNoTracking().Include(p => p.Categoria).Where(c => c.Categoria.Id == id).ToListAsync();
+            return await _context.Produtos.AsNoTracking().Include(p => p.Categoria).Where(c => c.Categoria.Codigo == codigo).ToListAsync();
         }
 
         public async Task<IEnumerable<Categoria>> ObterCategorias()
@@ -63,16 +58,6 @@ namespace DragonStore.Catalogo.Data.Repository
         public void Dispose()
         {
             _context?.Dispose();
-        }
-
-        public Task<IEnumerable<Produto>> ObterPorCategoria(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<Categoria>> ObterVategorias()
-        {
-            throw new NotImplementedException();
         }
     }
 }
