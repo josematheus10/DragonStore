@@ -1,9 +1,16 @@
-O quê eu aprendi hoje?
+ï»¿O quÃª eu aprendi hoje?
+
+#13/06/2022
+
+	NÃ£o impota o quanto eu estudo e tenho expÃªriencias com o Entity Framework 
+	Eu sempre me estou degaldiando com ele, a final um orm serve para simplifcar
+	o acesso a dados ğŸ¤” ou apenas para vocÃª passar hora e horas de raiva e desgosto com ele?
+	Hoje saio derrotado dessa luta e estou em dÃºvida se eu vou continuar com ele ou nÃ£o.
 
 #09/06/2022
 
-	Domain driven desing não se trata apenas de aplicações distribuídas, é possível criar monólitos seguindo os princípios do DDD.
-	Aplicações distribuídas geram complexidade técnica acidentais ou seja envolve 
-	outros sistemas complexos que envolvem aspecto de rede monitoramento etc..
-	Monólitos que aplicam o DDD podem ser convertidos em micro serviços posteriormente, tendo em vista que a camada de application 
-	expõe todo o coração do domínio.
+	Domain driven desing nÃ£o se trata apenas de aplicaÃ§Ãµes distribuÃ­das, Ã© possÃ­vel criar monÃ³litos seguindo os princÃ­pios do DDD.
+	AplicaÃ§Ãµes distribuÃ­das geram complexidade tÃ©cnica acidentais ou seja envolve 
+	outros sistemas complexos que exigem aspecto de rede, containers, monitoramento, Api Gateyay etc..
+	MonÃ³litos que aplicam o DDD podem ser convertidos em micro serviÃ§os posteriormente, tendo em vista que a camada de application 
+	expÃµe todo o coraÃ§Ã£o do domÃ­nio.
