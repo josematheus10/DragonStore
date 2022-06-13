@@ -2,8 +2,8 @@
 
 ## 13/06/2022
 
-	Não impota o quanto eu estudo e tenho expêriencias com o Entity Framework... 
-	Eu sempre me estou degladiando com ele, a final um orm serve para simplifcar
+	Não importa o quanto eu estudo e tenho experiências com o Entity Framework... 
+	Eu sempre me estou de gladiando com ele, a final um orm serve para simplificar
 	o acesso a dados ou apenas para você passar horas e horas de raiva e desgosto com ele? 🤔
 	Hoje saio derrotado dessa luta e estou em dúvida se eu vou continuar com ele ou não.
 
