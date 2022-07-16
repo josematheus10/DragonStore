@@ -1,9 +1,13 @@
 ﻿# O quê eu aprendi hoje?
 
+## 16/07/2022
+	Hoje eu quis fazer algo diferente, mudei totalmente meu ambiente, estou utilizando uma distro linux.
+	Vou testar tambem o github codespaces parece um recurso interesante.
+
 ## 13/06/2022
 
 	Não importa o quanto eu estudo e tenho experiências com o Entity Framework... 
-	Eu sempre me estou de gladiando com ele, a final um orm serve para simplificar
+	Eu sempre estou degladiando com ele, a final um orm serve para simplificar
 	o acesso a dados ou apenas para você passar horas e horas de raiva e desgosto com ele? 🤔
 	Hoje saio derrotado dessa luta e estou em dúvida se eu vou continuar com ele ou não.
 
