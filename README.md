@@ -4,7 +4,7 @@
 
 	Hoje eu quis fazer algo diferente, mudei totalmente meu ambiente, estou utilizando uma distro Linux (Pop OS!).
 	Vou testar também o github codespaces parece um recurso que certamente será amplamente utilizado por empresas.
-	Hoje eu terminei o contexto de Catalogo, e de início aos estudos sobre CQRS é um assunto bem amplo
+	Hoje eu terminei o contexto de Catalogo, e dei início aos estudos sobre CQRS é um assunto bem amplo
 	que dependem dos trade-off a serem levados em consideração, muito interessante aprender sobre Teorema CAP, 
 	e as estratégias de sincronização de informações.
 
