@@ -20,17 +20,22 @@ namespace DragonStore.WebApps.MVC.Areas.Admin.Controllers
             return View(await _produtoAppService.ObterTodos());
         }
 
-        [Route("novo")]
+        [HttpGet]
         public async Task<IActionResult> NovoProduto()
         {
             return View(await PopularCategorias(new ProdutoViewModel()));
         }
 
-        [Route("novo")]
         [HttpPost]
         public async Task<IActionResult> NovoProduto(ProdutoViewModel produtoViewModel)
         {
-            if (!ModelState.IsValid) return View(await PopularCategorias(produtoViewModel));
+
+            string messages = string.Join("; ", ModelState.Values
+                                             .SelectMany(x => x.Errors)
+                                             .Select(x => x.ErrorMessage));
+
+            if (!ModelState.IsValid) 
+                return View(await PopularCategorias(produtoViewModel));
 
             await _produtoAppService.AdicionarProduto(produtoViewModel);
 
@@ -38,14 +43,12 @@ namespace DragonStore.WebApps.MVC.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        [Route("editar")]
         public async Task<IActionResult> AtualizarProduto(Guid id)
         {
             return View(await PopularCategorias(await _produtoAppService.ObterPorId(id)));
         }
 
         [HttpPost]
-        [Route("editar")]
         public async Task<IActionResult> AtualizarProduto(Guid id, ProdutoViewModel produtoViewModel)
         {
             var produto = await _produtoAppService.ObterPorId(id);
@@ -60,14 +63,12 @@ namespace DragonStore.WebApps.MVC.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        [Route("atualizar-estoque")]
         public async Task<IActionResult> AtualizarEstoque(Guid id)
         {
             return View("Estoque", await _produtoAppService.ObterPorId(id));
         }
 
         [HttpPost]
-        [Route("atualizar-estoque")]
         public async Task<IActionResult> AtualizarEstoque(Guid id, int quantidade)
         {
             if (quantidade > 0)

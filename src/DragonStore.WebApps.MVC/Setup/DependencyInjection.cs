@@ -13,16 +13,15 @@ namespace DragonStore.WebApp.MVC.Setup
         public static void RegisterServices(this IServiceCollection services)
         {
             // Domain Bus (Mediator)
-            services.AddSingleton<IMediatrHandler, MediatrHandler>();
-        
-
+            services.AddScoped<IMediatrHandler, MediatrHandler>();
+         
             // Catalogo
             services.AddScoped<IProdutoRepository, ProdutoRepository>();
             services.AddScoped<IProdutoAppService, ProdutoAppService>();
             services.AddScoped<IEstoqueService, EstoqueService>();
 
-
             services.AddScoped<INotificationHandler<ProdutoAbaixoEstoqueEvent>, ProdutoEventHandler>();
+
         }
     }
 }

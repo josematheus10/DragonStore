@@ -1,8 +1,13 @@
 ﻿# O quê eu aprendi hoje?
 
 ## 16/07/2022
-	Hoje eu quis fazer algo diferente, mudei totalmente meu ambiente, estou utilizando uma distro linux.
-	Vou testar tambem o github codespaces parece um recurso interesante.
+
+	Hoje eu quis fazer algo diferente, mudei totalmente meu ambiente, estou utilizando uma distro Linux (Pop OS!).
+	Vou testar também o github codespaces parece um recurso que certamente será amplamente utilizado por empresas.
+	Hoje eu terminei eu terminei o contexto de Catalogo, e de início aos estudos sobre CQRS é um assunto bem amplo
+	que dependem dos trade-off a serem levados em consideração, muito interessante aprender sobre Teorema CAP, 
+	e as estratégias de sincronização de informações.
+
 
 ## 13/06/2022
 

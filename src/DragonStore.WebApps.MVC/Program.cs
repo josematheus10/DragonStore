@@ -15,6 +15,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 //EF CORE
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
+
 builder.Services.AddDbContext<CatalogoContext>(options =>
     options.UseSqlServer(connectionString));
 
@@ -24,8 +25,8 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddAutoMapper(typeof(DomainToViewModelMappingProfile), typeof(ViewModelToDomainMappingProfile));
-builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 builder.Services.RegisterServices();
 
 var app = builder.Build();
@@ -52,7 +53,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "admin",
-    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    pattern: "{area:exists}/{controller=Produtos}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",
